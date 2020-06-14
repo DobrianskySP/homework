@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Nums<T> {
 private T[] obj1;
 
@@ -18,5 +20,13 @@ private T[] obj1;
             }
             System.out.println();
         }
+    }
+
+    public ArrayList mergeToList(){
+        ArrayList<T> arr = new ArrayList<>();
+        for (int i = 0; i < obj1.length; i++) {
+            arr.add(obj1[i]);
+        }
+        return arr;
     }
 }
