@@ -10,19 +10,24 @@ public class Main {
         Nums<String> merge = new Nums<>("1","12","123","1234","12345");
         System.out.println(merge.mergeToList());
         //--------------------------------------------------
-        Box<Apple,Orange> boxOfApple = new Box<Apple, Orange>(new Apple());
-        Box<Apple,Orange> boxOfOrange = new Box<Apple, Orange>(new Orange());
+        Box<Fruit> boxOfApple = new Box<>(new Apple());
+        Box<Fruit> boxOfOrange = new Box<>(new Orange());
+        Box<Fruit> secondBoxOfApple = new Box<>(new Apple());
 
-        boxOfApple.putFruit(new Apple());
         boxOfApple.putFruit(new Apple());
         boxOfOrange.putFruit(new Orange());
         boxOfApple.putFruit(new Orange());
-        boxOfOrange.putFruit(new Apple());
-        boxOfOrange.putFruit(new Orange());
         boxOfApple.allWeight();
         boxOfOrange.allWeight();
+        secondBoxOfApple.allWeight();
 
+        boxOfApple.compare(boxOfApple);
 
+        boxOfApple.shiftFruit(boxOfOrange);
+        boxOfApple.allWeight();
+
+        boxOfApple.shiftFruit(secondBoxOfApple);
+        boxOfApple.allWeight();
     }
 
 }
