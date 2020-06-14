@@ -1,3 +1,3 @@
 public class Fruit {
-    float weigth = 0;
+    float weight = 0;
 }
